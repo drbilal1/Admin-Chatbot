@@ -25,16 +25,3 @@ A simple chatbot that lets an admin add, delete, and update user records using n
 3. The command is sent to the backend, where the Gemini API converts it into structured JSON (e.g. `{"action": "update", "name_lookup": "samantha", "field": "city", "value": "Cordoba"}`).
 4. The backend validates and executes the corresponding database operation (add/delete/update) — the AI never touches the database directly, only produces intent, which the backend safely executes.
 5. A confirmation message is sent back and displayed in the chat.
-
-## Setup Instructions
-
-### Backend
-
-```bash
-cd backend
-python -m venv venv
-venv\Scripts\activate      # Windows
-pip install -r requirements.txt
-```
-
-Create a `.env` file in `backend/` with:
